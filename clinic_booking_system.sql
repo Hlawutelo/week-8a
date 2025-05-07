@@ -76,7 +76,7 @@ CREATE TABLE Prescriptions (
     prescription_id INT AUTO_INCREMENT PRIMARY KEY,
     appointment_id INT UNIQUE NOT NULL,
     medication_details TEXT NOT NULL,
-    issue_date DATE DEFAULT CURRENT_DATE,
+    issue_date DATE,
     FOREIGN KEY (appointment_id) REFERENCES Appointments(appointment_id) ON DELETE CASCADE
 );
 
